@@ -1,4 +1,5 @@
 ﻿using GeekShooping.ProductAPI.Model.Base;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -15,6 +16,7 @@ public class Product : BaseEntity
     [Column("price")]
     [Required]
     [Range(1, 10000)]
+    [Precision(10, 2)]
     public decimal Price { get; set; }
 
     [Column("description")]
