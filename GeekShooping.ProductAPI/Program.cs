@@ -1,6 +1,11 @@
+using AutoMapper;
+using GeekShooping.ProductAPI.Config;
 using GeekShooping.ProductAPI.Model.Context;
+using GeekShooping.ProductAPI.Repository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using Microsoft.Win32;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +22,9 @@ builder.Services.AddSwaggerGen(c =>
         Version = "v1"
     });
 });
+
+builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingConfig>());
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var connection = builder.Configuration["MySQLConnection:MySQLConnectionString"];
 
