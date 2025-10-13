@@ -1,15 +1,7 @@
 ﻿{
   "$schema": "http://json.schemastore.org/launchsettings.json",
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:39633",
-      "sslPort": 0
-    }
-  },
   "profiles": {
-    "http": {
+    "GeekShoopingWEB": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
@@ -17,13 +9,10 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    },
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
     }
+  },
+  "AllowesHosts": "*",
+  "ServiceUrls": {
+    "ProductAPI": "http://localhost:5161"
   }
 }
