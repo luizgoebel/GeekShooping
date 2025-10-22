@@ -7,7 +7,7 @@ namespace GeekShooping.Web.Services;
 public class ProductService : IProductService
 {
     private readonly HttpClient _client;
-    private const string BasePath = "api/v1/product";
+    private const string BasePath = "/api/v1/product";
 
     public ProductService(HttpClient client)
     {

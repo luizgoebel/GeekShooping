@@ -11,8 +11,5 @@
       }
     }
   },
-  "AllowesHosts": "*",
-  "ServiceUrls": {
-    "ProductAPI": "http://localhost:5161"
-  }
+  "AllowesHosts": "*"
 }

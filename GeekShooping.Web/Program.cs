@@ -1,5 +1,6 @@
 using GeekShooping.Web.Services;
 using GeekShooping.Web.Services.IServices;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient<IProductService, ProductService>(c =>
-    c.BaseAddress = new Uri(builder.Configuration["ServicesUrls:ProductAPI"] ?? throw new InvalidOperationException("Service Product not configured.")));
+    c.BaseAddress = new Uri(builder.Configuration["ServicesUrls:ProductAPI"]));
 
 var app = builder.Build();
 
